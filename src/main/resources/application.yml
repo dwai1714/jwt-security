@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/emdm_d 
+    username : tdaruwalla
+    password : tdaruwalla     
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: emdm 
+        ddl-auto: create-drop
+  jackson:
+      serialization:
+        WRITE_DATES_AS_TIMESTAMPS : false
+  application:
+    name: JWT 
+    
+server:
+    port: 9000
+    
+authentication:
+  AuthenticationBuilder: com.accion.security.jwtoauthserver.authBuilder.DBAuthenticationBuilder
+    
+
+
+    
